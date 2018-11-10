@@ -35,7 +35,7 @@ Vagrant.configure("2") do |config|
   #   ./chef-repo : Project specific chef-solo
   ################################################################################
   config.vm.provision "chef_solo" do |chef|
-    chef.cookbooks_path = ["../chef/chef-repo/cookbooks", "./chef-repo/cookbooks"]
+    chef.cookbooks_path = ["../CHEF/chef-repo/cookbooks", "./chef-repo/cookbooks"]
     chef.roles_path = "./chef-repo/roles"
     chef.data_bags_path = "./chef-repo/data_bags"
     chef.environments_path = "./chef-repo/environments"
