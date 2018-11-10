@@ -1,4 +1,4 @@
-# boilerplate-vagrant-chef
+# Boilerplate: Vagrant & Chef
 Project boilerplate for running local vagrant projects using chef-solo provisioner.
 
 ### Project Directory Structure
