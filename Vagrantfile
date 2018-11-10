@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
   # /chef: OS Synced folder to a base chef build repo.
   ################################################################################
   config.vm.synced_folder ".", "/www/project-name", create: true, :mount_options => ['dmode=777,fmode=777']
-  config.vm.synced_folder "../CHEF", "/chef", create: true, :mount_options => ['dmode=777,fmode=777']
+  config.vm.synced_folder "../chef", "/chef", create: true, :mount_options => ['dmode=777,fmode=777']
 
   ################################################################################
   # Chef Provisioning:
@@ -35,7 +35,7 @@ Vagrant.configure("2") do |config|
   #   ./chef-repo : Project specific chef-solo
   ################################################################################
   config.vm.provision "chef_solo" do |chef|
-    chef.cookbooks_path = ["../CHEF/chef-repo/cookbooks", "./chef-repo/cookbooks"]
+    chef.cookbooks_path = ["../chef/chef-repo/cookbooks", "./chef-repo/cookbooks"]
     chef.roles_path = "./chef-repo/roles"
     chef.data_bags_path = "./chef-repo/data_bags"
     chef.environments_path = "./chef-repo/environments"
