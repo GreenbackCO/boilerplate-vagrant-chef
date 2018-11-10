@@ -1,8 +1,8 @@
 # boilerplate-vagrant-chef
-Project boilerplate for running local vagrant projects using chef-solo.
+Project boilerplate for running local vagrant projects using chef-solo provisioner.
 
 ### Project Directory Structure
-
+```
 |-- Client folder
   |-- CHEF ( base-chef repo, common server setup )
     |-- data_bags
@@ -18,3 +18,4 @@ Project boilerplate for running local vagrant projects using chef-solo.
       |-- recipes
       |-- roles
     |-- Project files and folders.....
+```
